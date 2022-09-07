@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/AchalMudgal/Job_Portal_project/issues"
   },
-  "homepage": "https://github.com/AchalMudgal/Job_Portal_project#readme"
+  "homepage": "https://github.com/AchalMudgal/Job_Portal_project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.4"
+  }
 }
