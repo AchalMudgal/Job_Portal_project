@@ -1,0 +1,19 @@
+{
+  "name": "job_portal_project",
+  "version": "1.0.0",
+  "description": "Job portal project inspired from naukri.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AchalMudgal/Job_Portal_project.git"
+  },
+  "author": "Achal_Mudgal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AchalMudgal/Job_Portal_project/issues"
+  },
+  "homepage": "https://github.com/AchalMudgal/Job_Portal_project#readme"
+}
