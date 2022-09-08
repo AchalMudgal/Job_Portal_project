@@ -3,41 +3,41 @@ const {userTypes,userStatuses} = require("../utils/constants");
 
 const userSchema = new mongoose.Schema(
     {
-        name:{
+        name: {
             type: String,
             required: true,
             trim: true
         },
-        email:{
+        email: {
             type: String,
+            unique: true,
             required: true,
             trim: true,
-            unique: true,
             lowercase: true,
             minLength: 5
         },
-        userId:{
+        userId: {
             type: String,
             required: true,
-            trim: true,
-            unique: true
+            unique: true,
+            trim: true
         },
-        password:{
+        password: {
             type: String,
             required: true,
             trim: true,
             minLength: 8
         },
-        userType:{
+        userType: {
             type: String,
             default: userTypes.applicant,
-            enum: [
+            enum:[
                 userTypes.applicant,
-                userTypes.hr,
-                userTypes.admin
+                userTypes.admin,
+                userTypes.hr
             ]
         },
-        userStatuses:{
+        userStatus: {
             type: String,
             default: userStatuses.approved,
             enum: [
@@ -45,6 +45,14 @@ const userSchema = new mongoose.Schema(
                 userStatuses.pending,
                 userStatuses.rejected
             ]
+        },
+        jobsApplied: {
+            type: [mongoose.SchemaType.objectId],
+            ref: "Job"
+        },
+        companyId:{
+            type: [mongoose.SchemaType.objectId],
+            ref: "Company"
         }
     }
 )
