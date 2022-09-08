@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
             ref: "Job"
         },
         companyId:{
-            type: [mongoose.SchemaType.objectId],
+            type: mongoose.SchemaType.objectId,
             ref: "Company"
         }
     }

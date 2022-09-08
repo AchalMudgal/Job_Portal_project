@@ -24,11 +24,11 @@ const jobSchema = new mongoose.Schema(
             ref: "User"
         },
         company: {
-            type: [mongoose.SchemaType.objectId],
+            type: mongoose.SchemaType.objectId,
             ref: "Company"
         },
         postedBy: {
-            type: [mongoose.SchemaType.objectId],
+            type: mongoose.SchemaType.objectId,
             ref: "User"
         }
     },
